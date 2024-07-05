@@ -1,3 +1,3 @@
 export default function () {
-  return <div>Dashboard page</div>
+  return <div className="font-bold">TODO: Dashboard page</div>
 }
