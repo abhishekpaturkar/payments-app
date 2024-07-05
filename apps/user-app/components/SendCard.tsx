@@ -20,16 +20,20 @@ export function SendCard() {
               placeholder={"Number"}
               label="Number"
               onChange={(value) => setNumber(value)}
+              value={number}
             />
             <TextInput
               placeholder={"Amount"}
               label="Amount"
               onChange={(value) => setAmount(value)}
+              value={amount}
             />
             <div className="flex justify-center pt-4">
               <Button
                 onClick={async () => {
                   await p2pTransfer(number, Number(amount) * 100)
+                  setAmount("")
+                  setNumber("")
                 }}
               >
                 Send
